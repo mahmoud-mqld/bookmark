@@ -36,7 +36,6 @@ body {
 /* overflow-x: hidden; */
 }
 
-
 h1 {
     position: relative;
     font-family: var(--mainFont);
@@ -62,6 +61,7 @@ h1:hover::before{
 
     height: 70%;
 }
+
 
 h2 {
     margin: auto;
