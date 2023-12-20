@@ -28,8 +28,7 @@ body {
     font-family: var(--font);
     font-family: var(--secondaryFont);
     font-weight: 800;
-    background-color: ;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem,3.5vw,2rem);
     letter-spacing: .1em;
     color: #fff;
     background: -webkit-linear-gradient(180deg, var(--main-color), var(--color3), var(--color4));
@@ -42,7 +41,7 @@ h1 {
     font-weight: 700;
     font-size: clamp(2rem,15vw,5rem);
     width: fit-content;
-    margin:2rem auto;
+    margin: .5em auto;
     /* font-size: clamp(2rem, calc(5rem+2vw) , 10rem); */
 }
 h1::before{
@@ -64,8 +63,7 @@ h1:hover::before{
 
 
 h2 {
-
-    margin:2rem auto;
+    margin:.5em auto;
     max-width: fit-content;
     font-size: clamp(1rem, 4vw, 2rem);
     background: -webkit-linear-gradient(0deg, var(--main-color), #fff, var(--color4));
@@ -95,7 +93,7 @@ h2 {
 } */
 
 .btns.btn-2 {
-    padding: .58em .5em;
+    padding: .3em .2em;
     border: solid 1px transparent;
     background-color: var(--color4);
 
@@ -115,9 +113,26 @@ h2 {
 .btns {
     color: var(--btn-pasive-Color);
     padding: 0 .3em;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 3vw, 2rem);
     border: solid 1px transparent;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+
+.btn-1:hover i {
+    background-color: #FFA732;
+    scale: 1.1;
+    color: #711DB0;
+    fill: #EF4040;
+
+}
+
+.btn-4:hover i {
+    scale: 1.1;
+    background-color: #FFA732;
+    color: #711DB0;
+    fill: #EF4040;
+
 }
 
 .btn-1:hover,
@@ -128,18 +143,14 @@ h2 {
 
 }
 
-.btns svg {
-    fill: #711DB0;
-}
 .btn-2:hover,
 .btn-3:hover {
     color: floralwhite;
-    /* background: -webkit-linear-gradient( var(--main-color), var(--color3), var(--color4)); */
-    background-color: #421b42;
+    background: -webkit-linear-gradient(0deg, var(--main-color), var(--color3), var(--color4));
+
 }
-.btn-2:hover svg,.btn-3:hover svg
+.btn-2:hover
 {
-    fill: #fff;
 }
 
 
@@ -173,18 +184,7 @@ h2 {
 
 }
 
-table {
-    overflow: hidden;
-    margin:auto;
-    border-radius: 10px;
-    padding: 20px;
-    /* background-color:var(--color3); */
-}
 
-table tbody {
-    border-radius: 5px;
-    padding-block: 5px;
-}
 
 
 .form-control.valid
@@ -199,27 +199,21 @@ table tbody {
 
 }
 
-
+input{margin: .2rem 0 .5em 0;}
 .form-control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--bs-body-color);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: var(--bs-border-width) solid var(--bs-border-color);
-    border-radius: var(--bs-border-radius);
+    font-size: 1rem;
+    /* color: var(--bs-body-color); */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
+    /* background-color: #fff; */
+    /* background-clip: padding-box; */
+    /* border: var(--bs-border-width) solid var(--bs-border-color); */
+    /* border-radius: var(--bs-border-radius); */
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .table {
-    text-align: center;
     --bs-table-color-type: initial;
     --bs-table-bg-type: initial;
     --bs-table-color-state: initial;
@@ -234,30 +228,45 @@ table tbody {
     --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
     --bs-table-hover-color: var(--bs-emphasis-color);
     --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
-    width: clamp(100%, 100%, 100%);
+    width: 100%;
     margin-bottom: 1rem;
     vertical-align: top;
     border-color: var(--bs-table-border-color);
     border-radius: 10px;
     overflow: hidden;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem,3.5vw,2rem);
 
 }
- @media screen and (max-width:500px){
+ @media screen and (max-width: 400px){
     .table{
-        text-align: center;
-        border-radius: 10px;
-        padding: 1px;
+        border: none;
+        margin: 0;
+        padding: 0;
+        justify-self: start;
         font-size: 1rem;
+        width: 200px;
         overflow: auto;
         width: 100%;
+        display: flex;
         flex-wrap: wrap;
+        /* flex-direction: column; */
         justify-content: center;
         align-items: center;
     }
 
     .btn-2,.btn-3{
-        font-size: .5rem;
+        font-size: .7rem;
     }
-}    
 
+
+table tbody {
+    border-radius: 5px;
+    padding-block: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+ }
