@@ -29,7 +29,7 @@ body {
     font-family: var(--secondaryFont);
     font-weight: 800;
     background-color: ;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: .1em;
     color: #fff;
     background: -webkit-linear-gradient(180deg, var(--main-color), var(--color3), var(--color4));
@@ -42,7 +42,7 @@ h1 {
     font-weight: 700;
     font-size: clamp(2rem,15vw,5rem);
     width: fit-content;
-    margin: auto;
+    margin:2rem auto;
     /* font-size: clamp(2rem, calc(5rem+2vw) , 10rem); */
 }
 h1::before{
@@ -64,7 +64,8 @@ h1:hover::before{
 
 
 h2 {
-    margin: auto;
+
+    margin:2rem auto;
     max-width: fit-content;
     font-size: clamp(1rem, 4vw, 2rem);
     background: -webkit-linear-gradient(0deg, var(--main-color), #fff, var(--color4));
@@ -94,7 +95,7 @@ h2 {
 } */
 
 .btns.btn-2 {
-    padding: .3em .2em;
+    padding: .58em .5em;
     border: solid 1px transparent;
     background-color: var(--color4);
 
@@ -114,9 +115,9 @@ h2 {
 .btns {
     color: var(--btn-pasive-Color);
     padding: 0 .3em;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     border: solid 1px transparent;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .btn-1:hover,
@@ -127,14 +128,18 @@ h2 {
 
 }
 
+.btns svg {
+    fill: #711DB0;
+}
 .btn-2:hover,
 .btn-3:hover {
     color: floralwhite;
-    background: -webkit-linear-gradient(0deg, var(--main-color), var(--color3), var(--color4));
-
+    /* background: -webkit-linear-gradient( var(--main-color), var(--color3), var(--color4)); */
+    background-color: #421b42;
 }
-.btn-2:hover
+.btn-2:hover svg,.btn-3:hover svg
 {
+    fill: #fff;
 }
 
 
@@ -169,9 +174,11 @@ h2 {
 }
 
 table {
-    border-radius: 5px;
+    overflow: hidden;
+    margin:auto;
+    border-radius: 10px;
     padding: 20px;
-    background-color: #EF4040;
+    /* background-color:var(--color3); */
 }
 
 table tbody {
@@ -212,6 +219,7 @@ table tbody {
 }
 
 .table {
+    text-align: center;
     --bs-table-color-type: initial;
     --bs-table-bg-type: initial;
     --bs-table-color-state: initial;
@@ -232,28 +240,24 @@ table tbody {
     border-color: var(--bs-table-border-color);
     border-radius: 10px;
     overflow: hidden;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 3vw, 2rem);
 
 }
-/* @media screen and (max-width: 600px){
+ @media screen and (max-width:500px){
     .table{
-        /* border: none; */
-        /* margin: 0; */
-        padding: 0;
-        /* justify-self: start; */
-        /* font-size: 1rem; */
-        /* width: 200px; */
+        text-align: center;
+        border-radius: 10px;
+        padding: 1px;
+        font-size: 1rem;
         overflow: auto;
         width: 100%;
-        display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .btn-2,.btn-3{
-        font-size: .6rem;
+        font-size: .5rem;
     }
-}     */
+}    
 
