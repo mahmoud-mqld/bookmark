@@ -63,8 +63,8 @@ function display(bookmarks) {
 <td></td>
 <td>  <a class="btns btn-2" target="_blank" href="${
       bookmarks[index].siteURL
-    }">visit <i class="bi bi-eye fs-5"></i></a> </td>
-<td> <button class="btns btn-3" onclick="remove(${index})" >remove <i class="bi bi-trash fs-5"></i></button> </td>
+    }">visit <i class="fa-solid fa-eye fs-6"></i></a> </td>
+<td> <button class="btns btn-3" onclick="remove(${index})" >remove <i class="fa-solid fa-trash fs-6"></i></button> </td>
  </tr>
 `;
   }
