@@ -36,11 +36,31 @@ body {
 /* overflow-x: hidden; */
 }
 
+
 h1 {
+    position: relative;
     font-family: var(--mainFont);
     font-weight: 700;
     font-size: clamp(2rem,15vw,5rem);
+    width: fit-content;
+    margin: auto;
     /* font-size: clamp(2rem, calc(5rem+2vw) , 10rem); */
+}
+h1::before{
+    position: absolute;
+    content: '';
+    background-color: #711DB0;
+    height: 25%;
+    width: 100%;
+    bottom: 4px;
+    z-index: -1;
+    transition: all 1s ease-in;
+
+}
+h1:hover::before{
+    background: -webkit-linear-gradient(0deg, var(--main-color), var(--color3), var(--color4));
+
+    height: 70%;
 }
 
 h2 {
