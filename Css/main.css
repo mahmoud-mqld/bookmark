@@ -237,7 +237,7 @@ input{margin: .2rem 0 .5em 0;}
     font-size: clamp(1rem,3.5vw,2rem);
 
 }
- @media screen and (max-width: 400px){
+/*  @media screen and (max-width: 400px){
     .table{
         border: none;
         margin: 0;
@@ -269,4 +269,4 @@ table tbody {
     flex-wrap: wrap;
     flex-direction: column;
 }
- }
+ } */
